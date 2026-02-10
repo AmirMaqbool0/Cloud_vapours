@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --light-black: #2d3748;
+  --dark-black: #1a202c;
+  --white: #ffffff;
+  --gray: #e2e8f0;
+  --blue: #4299e1;
+  --hover-blue: #3182ce;
+}

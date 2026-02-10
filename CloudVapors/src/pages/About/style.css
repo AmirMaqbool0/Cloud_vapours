@@ -1,0 +1,260 @@
+.about-main-container {
+  width: 100%;
+  height: fit-content;
+  padding: 40px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.about-left {
+  flex: 1;
+  width: 50%;
+}
+
+.about-left .sub-heading {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.about-left h2 {
+  font-size: 36px;
+  font-weight: 550;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.vape-images {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.vape-img {
+  width: 140px;
+  height: auto;
+}
+
+.about-right {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.about-info h3 {
+  font-size: 38px;
+  font-weight: 550;
+  margin-bottom: 8px;
+}
+
+.about-info p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* How We Started Section */
+.how-we-start-main-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.about-how-we-start-left-container {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.how-we-start-image {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.about-how-we-start-right-container {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-how-we-start-right-container span {
+  font-size: 32px;
+  font-weight: 600;
+  color: #1e1e2f;
+  margin-bottom: 16px;
+}
+
+.about-how-we-start-right-container p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.what-we-offer-main-container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+}
+.what-we-offer-heading{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.what-we-offer-heading span{
+  font-size:32px ;
+  font-weight: 550;
+
+}
+
+
+.what-we-offer-main-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.what-we-offer-heading {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.what-we-offer-heading span {
+  font-size: 32px;
+  font-weight: 550;
+}
+
+.what-we-offer-features {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #f7f7f7;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.offer-box {
+  width: 180px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.offer-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.offer-box p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #222;
+}
+
+
+
+/* Tablet and below (max-width: 992px) */
+@media (max-width: 992px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-left, .about-right {
+    width: 100%;
+  }
+
+  .about-right {
+    grid-template-columns: 1fr;
+  }
+
+  .how-we-start-main-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .about-how-we-start-left-container,
+  .about-how-we-start-right-container {
+    width: 100%;
+    text-align: center;
+  }
+
+  .what-we-offer-features {
+    justify-content: center;
+  }
+}
+
+/* Mobile (max-width: 576px) */
+@media (max-width: 576px) {
+  .how-we-start-main-container{
+    padding: 0px;
+  }
+  .about-left h2 {
+    font-size: 28px;
+  }
+
+  .about-info h3 {
+    font-size: 28px;
+  }
+
+  .about-info p,
+  .about-how-we-start-right-container p,
+  .offer-box p {
+    font-size: 14px;
+  }
+
+  .what-we-offer-heading span,
+  .about-how-we-start-right-container span {
+    font-size: 24px;
+  }
+
+  .vape-img {
+    width: 100px;
+  }
+  .what-we-offer-features {
+    padding: 20px;
+  }
+
+  .offer-box {
+    width: 140px;
+  }
+  .about-main-container {
+    padding: 30px;
+  }
+}

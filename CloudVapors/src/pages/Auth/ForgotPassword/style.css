@@ -1,0 +1,88 @@
+.forgot-page-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.forgot-top-bg {
+  height: 50%;
+  width: 100%;
+  background-color: var(--black);
+}
+
+.forgot-bottom-bg {
+  height: 50%;
+  width: 100%;
+  background-color: var(--white);
+}
+
+.forgot-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 390px;
+  padding: 30px;
+  background-color: var(--white);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: start;
+}
+
+.forgot-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.forgot-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--blue);
+}
+
+.forgot-description {
+  font-size: 14px;
+  color: var(--light-blue);
+  line-height: 1.6;
+}
+
+.forgot-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.forgot-label {
+  font-size: 14px;
+  color: var(--blue);
+}
+
+.forgot-input {
+  height: 44px;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid var(--light-blue);
+  outline: none;
+  font-size: 12px;
+}
+
+.forgot-button-group {
+  display: flex;
+  justify-content: center;
+}
+
+.forgot-submit-button {
+  width: 100%;
+  height: 40px;
+  border-radius: 12px;
+  background-color: var(--black);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+}

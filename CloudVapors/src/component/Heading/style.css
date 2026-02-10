@@ -1,0 +1,24 @@
+.heading-main-container{
+    height:fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 50px;
+
+    color: var(--white);
+    background-color: var(--black);
+
+}
+
+@media screen and (max-width:500px) {
+
+    .heading-main-container{
+        font-size: 18px;
+        padding: 30px;
+        text-align: center;
+        line-height: 1.2;
+    }
+    
+}

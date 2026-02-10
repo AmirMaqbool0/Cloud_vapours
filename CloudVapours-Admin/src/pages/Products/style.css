@@ -1,0 +1,561 @@
+:root {
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --light-black: #1e293b;
+    --white: #ffffff;
+    --gray: #e2e8f0;
+    --dark-gray: #64748b;
+    --light-gray: #f8fafc;
+    --border-color: #e2e8f0;
+    --error-color: #dc2626;
+}
+
+.product-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--light-gray);
+}
+
+.products-content {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    margin-top: 60px;
+}
+
+/* Header Styles */
+.products-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.product-header-search {
+    display: flex;
+    align-items: center;
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+.product-header-search input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.add-pro-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--light-black);
+    color: var(--white);
+    padding: 0.6rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.add-pro-btn:hover {
+    background: #334155;
+}
+
+.add-pro-btn span {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Filter Styles */
+.filters {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.device-filter select,
+.type-filter select {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    background: var(--white);
+    font-size: 0.9rem;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Table Styles */
+.products-table-container {
+    width: 100%;
+    overflow-x: auto;
+    background: var(--white);
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.products-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.products-table th,
+.products-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.products-table th {
+    background: #f8fafc;
+    font-weight: 600;
+    color: var(--light-black);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.product-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.product-image:hover {
+    transform: scale(1.05);
+}
+
+.image-placeholder {
+    width: 60px;
+    height: 60px;
+    background: #f1f5f9;
+    border-radius: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--dark-gray);
+}
+
+.description-cell {
+    max-width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.table-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.edit-btn,
+.delete-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.edit-btn {
+    background: #e6fffa;
+    color: #16a34a;
+}
+
+.edit-btn:hover {
+    background: #b2f5ea;
+}
+
+.delete-btn {
+    background: #fff5f5;
+    color: #dc2626;
+}
+
+.delete-btn:hover {
+    background: #fed7d7;
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 1rem;
+}
+
+.product-modal,
+.image-editor-modal {
+    background: var(--white);
+    border-radius: 0.75rem;
+    width: 100%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.image-editor-modal {
+    max-width: 700px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-header h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--light-black);
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--dark-gray);
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+}
+
+.close-btn:hover {
+    background: #f1f5f9;
+}
+
+/* Form Styles */
+form {
+    padding: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--light-black);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.625rem 0.875rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.form-group textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.size-input {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.size-input input {
+    flex: 1;
+}
+
+.size-input button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0 0.75rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.size-input button:hover {
+    background: var(--primary-hover);
+}
+
+.size-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.size-tags .size-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    background: #e2e8f0;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+}
+
+.size-tags .size-tag button {
+    background: none;
+    border: none;
+    color: #64748b;
+    cursor: pointer;
+    padding: 0 0.25rem;
+    font-size: 0.75rem;
+}
+
+.size-tags .size-tag button:hover {
+    color: var(--error-color);
+}
+
+.form-actions,
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    padding: 0 1.5rem 1.5rem;
+}
+
+.cancel-btn {
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    color: var(--dark-gray);
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.cancel-btn:hover {
+    background: #f1f5f9;
+}
+
+.submit-btn,
+.save-btn {
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.submit-btn:hover,
+.save-btn:hover {
+    background: var(--primary-hover);
+}
+
+/* Image Editor Styles */
+.image-editor-content {
+    padding: 1.5rem;
+}
+
+.upload-section {
+    margin-bottom: 1.5rem;
+}
+
+.upload-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #f0fdf4;
+    color: #16a34a;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.upload-btn:hover {
+    background: #dcfce7;
+}
+
+.upload-progress {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.upload-progress progress {
+    flex: 1;
+    height: 6px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1rem;
+}
+
+.image-item {
+    position: relative;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    aspect-ratio: 1/1;
+}
+
+.image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.remove-image-btn {
+    position: absolute;
+    top: 0.25rem;
+    right: 0.25rem;
+    width: 24px;
+    height: 24px;
+    background: rgba(220, 38, 38, 0.8);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* Loading and Empty States */
+.loading,
+.no-products {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    color: var(--dark-gray);
+    font-size: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .products-content {
+        margin-left: 0;
+        padding-top: 80px;
+    }
+
+    .products-table th,
+    .products-table td {
+        padding: 0.75rem;
+        font-size: 0.8125rem;
+    }
+
+    .description-cell {
+        max-width: 150px;
+    }
+}
+
+/* Add these styles to your existing CSS */
+
+.image-upload-section {
+    margin-top: 0.5rem;
+}
+
+.upload-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #f0fdf4;
+    color: #16a34a;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.upload-btn:hover {
+    background: #dcfce7;
+}
+
+.upload-progress {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.upload-progress progress {
+    flex: 1;
+    height: 6px;
+}
+
+.image-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.image-preview-item {
+    position: relative;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    aspect-ratio: 1/1;
+    background: #f1f5f9;
+}
+
+.image-preview-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.remove-image-btn {
+    position: absolute;
+    top: 0.25rem;
+    right: 0.25rem;
+    width: 20px;
+    height: 20px;
+    background: rgba(220, 38, 38, 0.8);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+}

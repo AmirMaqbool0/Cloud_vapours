@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root{
+  --black:black;
+  --white:white;
+  --gray:#EDEDED;
+  --light-gray:#F6F6F6;
+  --blue:rgb(43,54,116);
+  --light-blue:rgb(163,174,208);
+  --light-black:rgb(46,46,46);
+}
+.active span{
+  color: var(--black) !important;
+}

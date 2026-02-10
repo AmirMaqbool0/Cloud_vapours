@@ -1,0 +1,138 @@
+.products-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 50px;
+}
+
+.page-ref {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.page-ref span {
+    font-size: 16px;
+    color: #A4A4A4;
+    font-weight: 400;
+}
+
+.page-ref p {
+    font-size: 16px;
+    color: var(--black);
+    font-weight: 400;
+}
+
+.products-fillters-top{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.products-fillters-top p {
+    font-size: 16px;
+    color: #A4A4A4;
+    font-weight: 400;
+}
+
+.products-fillters-top span {
+    font-size: 16px;
+    color: var(--black);
+    font-weight: 400;
+}
+.products-fillters-top select{
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #A4A4A4;
+    outline: none;
+}
+.products-flavor{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 30px;
+}
+.products-product{
+    width: 23%;
+}
+
+.pagination-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pagination-btn {
+  padding: 8px 12px;
+  border: none;
+  background-color: #f5f5f5;
+  color: #000;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  min-width: 36px;
+  transition: 0.3s;
+}
+
+.pagination-btn.active {
+  background-color: #000;
+  color: #fff;
+}
+
+.pagination-btn:hover:not(.active) {
+  background-color: #ddd;
+}
+
+.pagination-dots {
+  padding: 8px 12px;
+  color: #888;
+}
+.np-btn{
+ background: none;
+ border: none;
+ font-size: 30px;
+}
+
+@media screen and (max-width:1079px) {
+  .products-flavor{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+  .products-product{
+        width: 40%;
+
+  }
+  
+}
+
+@media screen and (max-width:691px){
+    .products-product{
+        width: 60%;
+
+  }
+
+}
+@media screen and (max-width:500px){
+.products-container {
+  padding: 30px;
+}
+
+.products-fillters-top select{
+    width:120px;
+    height: 40px;
+  
+}
+    .products-product{
+        width: 100%;
+
+  }
+  
+}
